@@ -9,23 +9,22 @@ function shuffleArray(array) {
     return array;
 }
 
-const imagesFolder = path.join(__dirname, 'images');
-const imageFiles = fs.readdirSync(imagesFolder).filter(file => 
-    ['.jpg', '.jpeg', '.png', '.gif'].includes(path.extname(file).toLowerCase())
-);
+function generateImagePaths() {
+    const imagesFolder = path.join(process.cwd(), 'src', 'app', 'images');
+    const imageFiles = fs.readdirSync(imagesFolder).filter(file => 
+        ['.jpg', '.jpeg', '.png', '.gif'].includes(path.extname(file).toLowerCase())
+    );
 
-const shuffledImages = shuffleArray(imageFiles);
+    const shuffledImages = shuffleArray(imageFiles);
 
-const sections = ['home', 'story1', 'story2', 'story3', 'location', 'hotels'];
+    const sections = ['home', 'story1', 'story2', 'story3', 'location', 'hotels'];
 
-let css = '';
-sections.forEach((section, index) => {
-    // Use relative path instead of absolute path
-    const imagePath = `images/${shuffledImages[index % shuffledImages.length]}`;
-    css += `#${section} .background-image { background-image: url('${imagePath}'); }\n`;
-    css += `#${section} .dynamic-image { background-image: url('${imagePath}'); }\n\n`;
-});
+    const imagePaths = {};
+    sections.forEach((section, index) => {
+        imagePaths[section] = `/images/${shuffledImages[index % shuffledImages.length]}`;
+    });
 
-fs.writeFileSync(path.join(__dirname, 'generated-image-styles.css'), css);
+    return imagePaths;
+}
 
-console.log('Image styles have been generated and saved to generated-image-styles.css');
+module.exports = generateImagePaths;
