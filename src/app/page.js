@@ -2,25 +2,38 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          <ul>
-            <li>
-              <a href="/presentes">
-                Lista de presentes
-              </a>
-            </li>
-            <li>
-              <a href="/como-chegar">
-                Como chegar
-              </a>
-            </li>
-          </ul>
-          
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        {/* TODO: adicionar footer */}
-      </footer>
+    <div className="flex flex-col items-center">
+      <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/hero-background.jpg')"}}>
+        <div className="text-center text-white">
+          <h1 className="text-5xl font-bold mb-4">Lucas & Raquel</h1>
+          <p className="text-2xl">We're getting married!</p>
+          <p className="text-xl mt-4">October 15, 2024</p>
+        </div>
+      </section>
+
+      <section className="our-story min-h-screen flex items-center p-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+          <p className="mb-4">It all began on a sunny afternoon in the park...</p>
+          {/* Add more paragraphs or elements to tell your story */}
+        </div>
+      </section>
+
+      <section className="wedding-details min-h-screen flex items-center bg-gray-100 p-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Wedding Details</h2>
+          <p className="mb-4">Join us in celebrating our special day!</p>
+          {/* Add more details about the wedding */}
+        </div>
+      </section>
+
+      <section className="rsvp min-h-screen flex items-center p-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">RSVP</h2>
+          <p className="mb-4">We look forward to seeing you!</p>
+          {/* Add RSVP form or link */}
+        </div>
+      </section>
     </div>
   );
 }
