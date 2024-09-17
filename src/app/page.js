@@ -19,6 +19,34 @@
 // }
 
 import Image from "next/image";
+import Timeline from "./components/Timeline";
+
+const timelineEvents = [
+  {
+    title: "Our First Meeting",
+    date: "June 15, 2020",
+    description: "We met at a local coffee shop and instantly connected over our shared love for adventure.",
+    imageUrl: "/images/first-meeting.jpg",
+  },
+  {
+    title: "First Date",
+    date: "July 1, 2020",
+    description: "Our first official date was a picnic in the park. We talked for hours under the stars.",
+    imageUrl: "/images/niver.jpg",
+  },
+  {
+    title: "Moving In Together",
+    date: "February 14, 2022",
+    description: "We took the big step of moving in together and starting our life as a couple.",
+    imageUrl: "/images/apto-poa.jpg",
+  },
+  {
+    title: "The Proposal",
+    date: "December 25, 2023",
+    description: "On Christmas morning, surrounded by family, I got down on one knee and asked the big question.",
+    imageUrl: "/images/heaven.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -30,12 +58,10 @@ export default function Home() {
           <p className="text-xl mt-4">October 15, 2024</p>
         </div>
       </section>
-
       <section className="our-story min-h-screen flex items-center p-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-          <p className="mb-4">It all began on a sunny afternoon in the park...</p>
-          {/* Add more paragraphs or elements to tell your story */}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
+          <Timeline events={timelineEvents} />
         </div>
       </section>
 
