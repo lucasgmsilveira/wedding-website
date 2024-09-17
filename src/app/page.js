@@ -54,8 +54,8 @@ export default function Home() {
       <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/hero-background.jpg')"}}>
         <div className="text-center text-white">
           <h1 className="text-5xl font-bold mb-4">Lucas & Raquel</h1>
-          <p className="text-2xl">We're getting married!</p>
-          <p className="text-xl mt-4">October 15, 2024</p>
+          <p className="text-2xl">Casar-nos-emos!</p>
+          <p className="text-xl mt-4">11 de janeiro de 2025</p>
         </div>
       </section>
       <section className="our-story min-h-screen flex items-center p-8">

@@ -57,13 +57,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 z-50">
+        <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-80 z-50">
           <nav className="container mx-auto px-4 py-4">
             <ul className="flex justify-center space-x-6">
-              <li><Link href="/" className="text-gray-800 hover:text-gray-600">Home</Link></li>
-              <li><Link href="/como-chegar" className="text-gray-800 hover:text-gray-600">How to Get There</Link></li>
-              <li><Link href="/hospedagem" className="text-gray-800 hover:text-gray-600">Hotels</Link></li>
-              <li><Link href="/presentes" className="text-gray-800 hover:text-gray-600">Gifts</Link></li>
+              <li><Link href="/" className="text-gray-800">Home</Link></li>
+              <li><Link href="/como-chegar" className="text-gray-800">How to Get There</Link></li>
+              <li><Link href="/hospedagem" className="text-gray-800">Hotels</Link></li>
+              <li><Link href="/presentes" className="text-gray-800">Gifts</Link></li>
             </ul>
           </nav>
         </header>
