@@ -3,12 +3,32 @@
         "id": "presente-1",
         "nome": "Presente 1",
         "descricao": "Descrição 1",
-        "urlImagem": "https://cdn.icon-icons.com/icons2/976/PNG/256/dropbox2_icon-icons.com_74974.png"
+        "valor": "50.00",
+        "urlImagem": "/images/presentes/baloon.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_50.jpg"
     },
     {
         "id": "presente-2",
         "nome": "Presente 2",
         "descricao": "Descrição 2",
-        "urlImagem": "https://cdn.icon-icons.com/icons2/976/PNG/256/dropbox2_icon-icons.com_74974.png"
+        "valor": "100.00",
+        "urlImagem": "/images/presentes/spa.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_100.jpg"
+    },
+    {
+        "id": "presente-3",
+        "nome": "Presente 3",
+        "descricao": "Descrição 3",
+        "valor": "200.00",
+        "urlImagem": "/images/presentes/dancing.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_200.jpg"
+    },
+    {
+        "id": "presente-4",
+        "nome": "Presente 4",
+        "descricao": "Descrição 4",
+        "valor": "250.00",
+        "urlImagem": "/images/presentes/baloon.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_250.jpg"
     }
 ]

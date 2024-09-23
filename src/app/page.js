@@ -51,8 +51,8 @@ const timelineEvents = [
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/hero-background.jpg')"}}>
-        <div className="text-center text-white">
+      <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/background6.jpg')"}}>
+        <div className="text-center text-black">
           <h1 className="text-5xl font-bold mb-4">Lucas & Raquel</h1>
           <p className="text-2xl">Casar-nos-emos!</p>
           <p className="text-xl mt-4">11 de janeiro de 2025</p>

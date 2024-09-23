@@ -177,3 +177,226 @@ header nav ul li a:hover {
     transform: translateX(100px);
   }
 }
+
+/* Center the gift page content */
+.gift-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for the confirm button */
+.confirm-button {
+  background-color: #0070f3;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Animation for the 'Presentar' button on the gift list page */
+.presentar-button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.presentar-button:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
+
+/* CSS for the QR code container */
+.qr-code-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Remove any existing zoom-in effect */
+.qr-code-container .qr-code {
+  transition: none;
+}
+
+.qr-code-container:hover .qr-code {
+  transform: none;
+}
+
+/* Add magnifying glass icon overlay on hover */
+.qr-code-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  background-image: url('/images/qr_codes/magnifying-glass.svg'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.qr-code-container:hover::after {
+  opacity: 1;
+}
+
+/* Center the gift list page content */
+.gift-list-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gift-list {
+  list-style: none;
+  padding: 0;
+}
+
+.gift-item {
+  margin-bottom: 40px;
+}
+
+.gift-item img {
+  border-radius: 10px;
+}
+
+/* Styles for the gift card */
+.gift-card {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the gift detail card */
+.gift-detail-card {
+  background-color: white;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+/* Center images within the gift-detail-card */
+.gift-detail-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alternatively, if you have specific class names */
+.gift-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.modal-content img {
+  border-radius: 10px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: #000;
+}
+
+/* Prevent background scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Loading container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Spinner */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #0070f3; /* Blue or your preferred color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading message */
+.loading-container p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
