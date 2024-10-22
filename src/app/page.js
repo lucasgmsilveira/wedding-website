@@ -1,23 +1,3 @@
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-//       <div className="text-center">
-//         <Image
-//           src="/images/under-construction.png"
-//           alt="Em construção!"
-//           width={300}
-//           height={300}
-//           className="mx-auto mb-8"
-//         />
-//         <h1 className="text-4xl font-bold text-gray-800 mb-4">Em construção!</h1>
-//         <p className="text-xl text-gray-600">Nosso site estará pronto em breve!</p>
-//       </div>
-//     </div>
-//   );
-// }
-
 import Image from "next/image";
 import Timeline from "./components/Timeline";
 
