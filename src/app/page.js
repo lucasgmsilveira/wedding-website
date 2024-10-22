@@ -60,7 +60,9 @@ export default function Home() {
       </section>
       <section className="our-story min-h-screen flex items-center p-8 text-lime-700 drop-shadow-lg font-bold">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center bg-white bg-opacity-60 p-8 rounded-xl ">Um pouco da nossa história...</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center bg-white bg-opacity-60 p-8 rounded-xl ">
+            Um pouco da nossa história...
+          </h2>
           <Timeline events={timelineEvents} />
         </div>
       </section>
@@ -102,7 +104,7 @@ export default function Home() {
             href="https://wa.me/5551993016445" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-lime-900 underline ml-1 transition-colors"
+            className="inline-flex items-center gap-2 hover:text-lime-600 ml-1 transition-colors"
             title="WhatsApp do Lucas"
           >
             <span className="text-2xl font-bold">Caso não possa comparecer, avise-nos clicando aqui!</span>

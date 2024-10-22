@@ -30,7 +30,9 @@ const hotels = [
 export default function Hospedagem() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Hoteis Sugeridos</h1>
+      <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-60">
+        Hoteis Sugeridos
+      </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {hotels.map((hotel, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden hotel-card">
@@ -42,14 +44,14 @@ export default function Hospedagem() {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-2">{hotel.name}</h2>
-              <p className="text-gray-800 mb-4">{hotel.description}</p>
-              <div className="button-container">
+              <h2 className="text-2xl font-semibold mb-2">{hotel.name}</h2>
+              <p className="text-gray-800 mb-4 text-xl">{hotel.description}</p>
+              <div className="text-xl button-container">
               <a
                 href={hotel.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300"
               >
                 Ver mais detalhes
               </a>

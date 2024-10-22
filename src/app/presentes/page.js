@@ -8,8 +8,10 @@ import Image from "next/image";
 export default function ListaPresentes() {
   return (
     <main className="gift-list-page">
-      <h1 className="mb-6 font-bold">Lista de presentes</h1>
-      <ul className="gift-list">
+      <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-70">
+        Lista de presentes
+      </h1>
+      <ul className="gift-list text-lime-600 drop-shadow-xl font-bold">
         {listaPresentes.map(presente => (
           <li key={presente.id} className="gift-item">
           <div className="gift-card">

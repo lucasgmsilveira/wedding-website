@@ -206,7 +206,7 @@ header nav ul li a:hover {
 
 /* Style for the confirm button */
 .confirm-button {
-  background-color: #0070f3;
+  background-color: #21ff9f;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -217,7 +217,7 @@ header nav ul li a:hover {
 }
 
 .confirm-button:hover {
-  background-color: #005bb5;
+  background-color: #00b712;
   transform: scale(1.05);
 }
 
@@ -282,10 +282,12 @@ header nav ul li a:hover {
 .loading-content {
   transition: all 0.5s ease-in-out;
   position: relative;
+  color: #008b05;
 }
 
 .loading-content {
   margin-top: 2rem;
+  color: #008b05;
 }
 
 .loading-container {
@@ -293,6 +295,7 @@ header nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  color: #008b05;
 }
 
 .thank-you-container {
@@ -303,11 +306,11 @@ header nav ul li a:hover {
 .thank-you-message {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #003e02;
+  color: #008b05;
 }
 
 .return-button {
-  background-color: #2196F3;
+  background-color: #00c9c5;
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -354,7 +357,7 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   margin: 0 auto; 
   border-radius: 10px;
@@ -370,7 +373,7 @@ header nav ul li a:hover {
 
 /* Styles for the gift detail card */
 .gift-detail-card {
-  background-color:  rgba(255, 255, 255, 0.6);;
+  background-color:  rgba(255, 255, 255, 0.8);;
   padding: 30px;
   margin: 20px;
   border-radius: 10px;

@@ -54,9 +54,10 @@ export default function ComoChegar() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
-        <div className="bg-white rounded-xl shadow-md p-8 mb-8 bg-opacity-50">
-          <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg">Como Chegar</h1>
-
+        <div>
+          <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-60">
+            Como Chegar
+          </h1>
           <LocationBlock
             title="Igreja"
             imageSrc="/api/placeholder/800/600"

@@ -69,7 +69,7 @@ export default function Presentear({ params }) {
 
   return (
     <main className="gift-page">
-      <div className="gift-detail-card">
+      <div className="gift-detail-card text-lime-600 drop-shadow-xl font-bold">
         <h1 className="mb-4"><strong>{presente.nome}</strong></h1>
         <Image 
           src={presente.urlImagem}
@@ -110,8 +110,8 @@ export default function Presentear({ params }) {
 
         {/* Completed State */}
         {isCompleted && (
-          <div className="thank-you-container fade-in">
-            <p className="thank-you-message mb-4">Muito obrigado pelo presente!</p>
+          <div className="thank-you-container fade-in text-lime-600 drop-shadow-xl font-bold">
+            <p className="thank-you-message mb-4 text-lime-600 drop-shadow-xl font-bold">Muito obrigado pelo presente!</p>
             <button 
               className="return-button"
               onClick={() => router.push('/')}
