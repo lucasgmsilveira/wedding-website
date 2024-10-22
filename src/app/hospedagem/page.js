@@ -2,22 +2,28 @@ import Image from 'next/image';
 
 const hotels = [
   {
-    name: "Luxury Grand Hotel",
-    description: "A 5-star hotel with stunning views and top-notch amenities.",
-    image: "/images/hotels/luxury-grand.jpg",
-    website: "https://www.luxurygrandhotel.com",
+    name: "Hotel Niro",
+    description: "R. Buarque de Macedo, 1727 - Centenário, Montenegro - RS, 92510-855",
+    image: "/images/hotels/hotel-niro.png",
+    website: "https://maps.app.goo.gl/UrD7fwRjY26TLP2g8?g_st=iw",
   },
   {
-    name: "Cozy Boutique Inn",
-    description: "A charming boutique hotel with a homey atmosphere.",
-    image: "/images/hotels/cozy-boutique.jpg",
-    website: "https://www.cozyboutiqueinn.com",
+    name: "Ibis Montenegro",
+    description: "Esquina - Rua Capitao Porfirio, R. São João, 1615, Montenegro - RS, 95780-000",
+    image: "/images/hotels/ibis.png",
+    website: "https://maps.app.goo.gl/aTbEoyVL94CRMGGc9?g_st=iw",
   },
   {
-    name: "Budget Comfort Suites",
-    description: "Affordable comfort with all the essentials for a pleasant stay.",
-    image: "/images/hotels/budget-comfort.jpg",
-    website: "https://www.budgetcomfortsuites.com",
+    name: "Hotel Ibiá",
+    description: "R. Ramiro Barcelos, 2272 - Centro, Montenegro - RS, 95780-000",
+    image: "/images/hotels/hotel-ibia.png",
+    website: "https://maps.app.goo.gl/wZz2ED9xx7BrUQyk9?g_st=iw",
+  },
+  {
+    name: "Airbnb",
+    description: "Outra possibilidade é alugar casa ou apto",
+    image: "/images/hotels/airbnb.webp",
+    website: "https://www.airbnb.com.br/s/Montenegro-~-RS/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&price_filter_input_type=0&channel=EXPLORE&query=Montenegro%20-%20RS&place_id=ChIJZ1OozSn7G5URn6jvghokQ_A&date_picker_type=calendar&source=structured_search_input_header&search_type=user_map_move&monthly_start_date=2025-01-11&monthly_length=3&monthly_end_date=2025-02-11&search_mode=regular_search&price_filter_num_nights=1&monthly_dial_flexible_start_date_search_filter_type=0&flexible_trip_lengths%5B%5D=weekend_trip&flexible_trip_dates%5B%5D=january&checkin=2025-01-11&checkout=2025-01-12&ne_lat=-29.640149817873255&ne_lng=-51.417067112844904&sw_lat=-29.740716019753325&sw_lng=-51.511978626769235&zoom=13.162921770949882&zoom_level=13.162921770949882&search_by_map=true",
   },
 ];
 
@@ -37,7 +43,7 @@ export default function Hospedagem() {
             />
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2">{hotel.name}</h2>
-              <p className="text-gray-600 mb-4">{hotel.description}</p>
+              <p className="text-gray-800 mb-4">{hotel.description}</p>
               <div className="button-container">
               <a
                 href={hotel.website}
@@ -45,7 +51,7 @@ export default function Hospedagem() {
                 rel="noopener noreferrer"
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
               >
-                Book Now
+                Ver mais detalhes
               </a>
               </div>
             </div>

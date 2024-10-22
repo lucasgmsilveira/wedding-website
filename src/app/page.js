@@ -52,32 +52,61 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/background6.jpg')"}}>
-        <div className="text-center text-black">
-          <h1 className="text-5xl font-bold mb-4">Lucas & Raquel</h1>
-          <p className="text-2xl">Casar-nos-emos!</p>
-          <p className="text-xl mt-4">11 de janeiro de 2025</p>
+        <div className="hero-text text-center text-lime-700 drop-shadow-lg bg-white bg-opacity-100 p-8 rounded-xl">
+          <h1 className="text-6xl mb-4 font-bold">Lucas & Raquel</h1>
+          <p className="text-2xl italic font-bold">Casar-nos-emos!</p>
+          {/* <p className="text-3xl mt-4 font-bold">11 de janeiro de 2025</p> */}
         </div>
       </section>
-      <section className="our-story min-h-screen flex items-center p-8">
+      <section className="our-story min-h-screen flex items-center p-8 text-lime-700 drop-shadow-lg font-bold">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center bg-white bg-opacity-60 p-8 rounded-xl ">Um pouco da nossa história...</h2>
           <Timeline events={timelineEvents} />
         </div>
       </section>
 
-      <section className="wedding-details min-h-screen flex items-center bg-gray-100 p-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Wedding Details</h2>
-          <p className="mb-4">Join us in celebrating our special day!</p>
-          {/* Add more details about the wedding */}
+      <section className="wedding-details max-h-fit flex items-center bg-white bg-opacity-90 p-8 rounded-xl my-6 text-lime-700 drop-shadow-lg">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-center">Detalhes sobre o casamento</h2>
+          <p className="text-xl mb-4 drop-shadow-lg"><b>Data</b>: 11 de janeiro de 2025</p>
+          <p className="text-xl mb-4 drop-shadow-lg"><b>Horário</b>: 19h</p>
+          <p className="text-xl mb-4 drop-shadow-lg">
+            <b>Igreja</b>: 
+            <a 
+              href="https://maps.app.goo.gl/kvWPtqpaYtuanepo8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-lime-900 underline ml-1 transition-colors"
+              title="Ver localização da Igreja no Google Maps"
+            >
+              São Francisco de Salles
+            </a>
+          </p>
+          <p className="text-xl mb-4 drop-shadow-lg"><b>Jantar/Festa</b>: 
+            <a 
+              href="https://maps.app.goo.gl/hj7KQfrW4LDpkvN39" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-lime-900 underline ml-1 transition-colors"
+              title="Ver localização do Salão no Google Maps"
+            >
+              Salão Fink
+            </a>
+            </p>
         </div>
       </section>
 
-      <section className="rsvp min-h-screen flex items-center p-8">
+      <section className="rsvp  max-h-fit flex items-center p-8 bg-white bg-opacity-80 p-8 rounded-xl my-6 text-lime-700 drop-shadow-lg font-bold">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">RSVP</h2>
-          <p className="mb-4">We look forward to seeing you!</p>
-          {/* Add RSVP form or link */}
+          <a 
+            href="https://wa.me/5551993016445" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 hover:text-lime-900 underline ml-1 transition-colors"
+            title="WhatsApp do Lucas"
+          >
+            <span className="text-2xl font-bold">Caso não possa comparecer, avise-nos clicando aqui!</span>
+          </a>
         </div>
       </section>
     </div>
