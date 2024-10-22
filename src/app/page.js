@@ -57,7 +57,7 @@ export default function Home() {
     <div className="flex flex-col items-center">
       <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/background6.jpg')"}}>
         <div className="hero-text text-center text-lime-700 drop-shadow-lg bg-white bg-opacity-100 p-8 rounded-xl">
-          <h1 className="text-6xl mb-4 font-bold">Lucas & Raquel</h1>
+          <h1 className="text-6xl mb-4 font-bold">Raquel & Lucas</h1>
           <p className="text-2xl italic font-bold">Casar-nos-emos!</p>
           {/* <p className="text-3xl mt-4 font-bold">11 de janeiro de 2025</p> */}
         </div>
