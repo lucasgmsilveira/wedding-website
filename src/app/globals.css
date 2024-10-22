@@ -17,7 +17,10 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: Garamond, var(--font-geist-sans), Arial, sans-serif;
+  background-image: url('/images/background4.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
 }
 
 @layer utilities {
@@ -26,50 +29,529 @@ body {
   }
 }
 
-/* Animations */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
+.hero, .our-story, .wedding-details, .rsvp {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Parallax effect */
+.hero {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 60%;
+}
+
+.hero-text {
+  opacity: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+header {
+  height: 60px;
+}
+
+header nav ul li a {
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #89cd02;
+  /* transform: scale(2); */
+  font-size: 1.2em;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #999;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.timeline-item.left {
+  transform: translateX(-60%);
+}
+
+.timeline-item.right {
+  left: 50%;
+  transform: translateX(60%);
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.timeline-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.timeline-date {
+  color: #666;
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    transform: translateX(100px);
+  }
+}
+
+/* Center the gift page content */
+.gift-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for the confirm button */
+.confirm-button {
+  background-color: #00bb6a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.6s ease, transform 0.5s ease;
+}
+
+.confirm-button:hover {
+  background-color: #00ec86;
+  transform: scale(1.05);
+}
+
+/* Animation for the 'Presentar' button on the gift list page */
+.presentar-button {
+  background-color: #02a46e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.presentar-button:hover {
+  background-color: #1bbc87;
+  transform: scale(1.05);
+}
+
+/* CSS for the QR code container */
+.qr-code-container {
+  position: relative;
+  /* width: 200px;
+  height: 200px; */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  cursor: pointer;
+  /* transition: transform 0.5s ease; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove any existing zoom-in effect */
+.qr-code-container .qr-code {
+  transition: none;
+}
+
+.qr-code-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.qr-code:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
+}
+
+/* Add magnifying glass icon overlay on hover */
+.qr-code-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  background-image: url('/images/qr_codes/magnifying-glass.svg'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.qr-code-container:hover::after {
+  opacity: 1;
+}
+
+/* Style for the confirm button */
+.copy-button {
+  /* background-color: #00bb6a;
+  color: #00bb6a; */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.6s ease, transform 0.5s ease;
+}
+
+.copy-button:hover {
+  /* background-color: #00ec86; */
+  transform: scale(1.05);
+}
+
+.initial-content,
+.loading-content {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  color: #008b05;
+}
+
+.loading-content {
+  margin-top: 2rem;
+  color: #008b05;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #008b05;
+}
+
+.thank-you-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.thank-you-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #008b05;
+}
+
+.return-button {
+  background-color: #00c9c5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.return-button:hover {
+  background-color: #1976D2;
+}
+
+.gift-list-page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gift-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gift-item {
+  margin-bottom: 40px;
+  break-inside: avoid;
+}
+
+.gift-item img {
+  border-radius: 10px;
+}
+
+/* Styles for the gift card */
+.gift-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 0 auto; 
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  max-width: 350px;
+}
+/* 
+.gift-card > div { 
+  width: 100% !important;
+  max-width: 300px !important;
+} */
+
+/* Styles for the gift detail card */
+.gift-detail-card {
+  background-color:  rgba(255, 255, 255, 0.8);;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  position: relative;
+  /* min-height: 600px;  */
+}
+
+/* Center images within the gift-detail-card */
+.gift-detail-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alternatively, if you have specific class names */
+.gift-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.modal-content img {
+  border-radius: 10px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: #000;
+}
+
+/* Prevent background scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+.fade-element {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  max-height: 1000px;
+  pointer-events: auto;
+}
+
+.fade-out {
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Fade-in animation */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Loading container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* Spinner */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #f34100; /* Blue or your preferred color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
 }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-out;
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 1s ease-out;
+/* Loading message */
+.loading-container p {
+  margin-top: 10px;
+  font-size: 18px;
+  /* color: #333; */
 }
 
-.animate-fade-in-scale {
-  animation: fadeInScale 1s ease-out;
+.hotel-card {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.animation-delay-300 {
-  animation-delay: 300ms;
+.button-container {
+  display: flex;
+  justify-content: center;
 }
 
-.animation-delay-600 {
-  animation-delay: 600ms;
+/* Como chegar */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }

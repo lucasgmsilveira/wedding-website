@@ -1,87 +1,120 @@
-'use client'
-
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import AnimatedMessages from "./AnimatedMessages";
+import Timeline from "./components/Timeline";
+
+const timelineEvents = [
+  {
+    title: "A primeira vista",
+    date: "Dezembro, 2019",
+    description: "Em meio a risadas e música, nos encontramos pela primeira vez. Mal sabíamos que algo muito especial tinha começado, mas uma pandemia os aguardava!",
+    imageUrl: "/images/nossa-historia/river_2.jpg",
+  },
+  {
+    title: "O namoro",
+    date: "Agosto, 2021",
+    description: "Depois de vários encontros e conversas diversas, a vontade de ficar mais e mais juntos só cresceu (em média)!",
+    imageUrl: "/images/nossa-historia/lago.jpg",
+  },
+  {
+    title: "A festa",
+    date: "Dezembro, 2021",
+    description: "Voltar à mesma festa onde nos conhecemos traz uma sensação única. O ambiente familiar e o sentimento de amor sempre mais forte!",
+    imageUrl: "/images/nossa-historia/festa.jpg",
+  },
+  {
+    title: "A natureza",
+    date: "Janeiro, 2022",
+    description: "Amamos respirar o ar puro, contemplar paisagens e nos conectarmos ainda mais com a natureza e com o outro!",
+    imageUrl: "/images/nossa-historia/cascata.jpg",
+  },
+  {
+    title: "O presságio",
+    date: "Outubro, 2022",
+    description: "Em um daqueles momentos aleatórios, percebemos que casar não era mais uma questão de \"se\", mas de \"quando\". Será que o Lucas vai se ligar?",
+    imageUrl: "/images/nossa-historia/bride.jpg",
+  },
+  {
+    title: "A viagem",
+    date: "Janeiro, 2023",
+    description: "Enquanto o pedido não chega, bora viajar! Expande nossos horizontes, cria memórias inesquecíveis e nos lembra de que qualquer lugar é a nossa casa.",
+    imageUrl: "/images/nossa-historia/argentina.jpg",
+  },
+  {
+    title: "A proposta",
+    date: "25 de Novembro de 2023",
+    description: "\"Nãããão! Digo... Siiiim!!!\" Quase infartando, finalmente o pedido que mudaria nossas vidas foi feito! E você, aceita ir no nosso casamento?!",
+    imageUrl: "/images/nossa-historia/pedido.jpg",
+  },
+  {
+    title: "E você?",
+    date: "11 de Janeiro de 2025",
+    description: "Aceita ir no nosso casamento?!",
+    imageUrl: "/images/nossa-historia/aceita.jpg",
+  },
+];
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-cover bg-center" 
-      style={{ backgroundImage: "url('/images/gradient-bg.jpg')"}}>
-      <h1 className={`text-4xl font-bold text-gray-800 mb-4 transition-all duration-1000 ease-in-out ${
-        isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-10'
-      }`}>
-        Em construção!
-      </h1>
-      <div className="text-center">
-        <div className={`transition-all duration-1000 ease-in-out delay-300 ${
-          isVisible ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-95'
-        }`}>
-          <Image
-            src="/images/under-construction.png"
-            alt="Em construção"
-            width={300}
-            height={300}
-            className="mx-auto mb-8"
-          />
+    <div className="flex flex-col items-center">
+      <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/background6.jpg')"}}>
+        <div className="hero-text text-center text-lime-700 drop-shadow-lg bg-white bg-opacity-100 p-8 rounded-xl">
+          <h1 className="text-6xl mb-4 font-bold">Lucas & Raquel</h1>
+          <p className="text-2xl italic font-bold">Casar-nos-emos!</p>
+          {/* <p className="text-3xl mt-4 font-bold">11 de janeiro de 2025</p> */}
         </div>
-        <p className={`text-xl text-gray-600 transition-all duration-1000 ease-in-out delay-600 ${
-          isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}>
-          Nosso site estará pronto em breve!
-        </p>
-        <div className={`w-80 mx-auto mb-8 transition-all duration-1000 ease-in-out delay-900 ${
-          isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}>
-          <AnimatedMessages />
+      </section>
+      <section className="our-story min-h-screen flex items-center p-8 text-lime-700 drop-shadow-lg font-bold">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-center bg-white bg-opacity-70 p-8 rounded-xl ">
+            Um pouco da nossa história...
+          </h2>
+          <Timeline events={timelineEvents} />
         </div>
-      </div>
+      </section>
+
+      <section className="wedding-details max-h-fit flex items-center bg-white bg-opacity-80 p-8 rounded-xl my-6 text-lime-700 drop-shadow-lg">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-center">Detalhes sobre o casamento</h2>
+          <p className="text-xl mb-4 drop-shadow-lg"><b>Data</b>: 11 de janeiro de 2025</p>
+          <p className="text-xl mb-4 drop-shadow-lg"><b>Horário</b>: 19h</p>
+          <p className="text-xl mb-4 drop-shadow-lg">
+            <b>Igreja</b>: 
+            <a 
+              href="https://maps.app.goo.gl/kvWPtqpaYtuanepo8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-lime-900 underline ml-1 transition-colors"
+              title="Ver localização da Igreja no Google Maps"
+            >
+              São Francisco de Salles
+            </a>
+          </p>
+          <p className="text-xl mb-4 drop-shadow-lg"><b>Jantar/Festa</b>: 
+            <a 
+              href="https://maps.app.goo.gl/hj7KQfrW4LDpkvN39" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-lime-900 underline ml-1 transition-colors"
+              title="Ver localização do Salão no Google Maps"
+            >
+              Salão Fink
+            </a>
+            </p>
+        </div>
+      </section>
+
+      <section className="rsvp max-h-fit flex items-center p-8 bg-white bg-opacity-80 p-8 rounded-xl my-6 text-red-500 drop-shadow-lg font-bold">
+        <div className="max-w-3xl mx-auto text-center">
+          <a 
+            href="https://wa.me/5551993016445" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 hover:text-red-700 ml-1 transition-colors"
+            title="WhatsApp do Lucas"
+          >
+            <span className="text-2xl font-bold">Caso não possa comparecer, avise-nos clicando aqui!</span>
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
-
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="flex flex-col items-center">
-//       <section className="hero min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('/images/hero-background.jpg')"}}>
-//         <div className="text-center text-white">
-//           <h1 className="text-5xl font-bold mb-4">Lucas & Raquel</h1>
-//           <p className="text-2xl">We're getting married!</p>
-//           <p className="text-xl mt-4">October 15, 2024</p>
-//         </div>
-//       </section>
-
-//       <section className="our-story min-h-screen flex items-center p-8">
-//         <div className="max-w-3xl mx-auto text-center">
-//           <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-//           <p className="mb-4">It all began on a sunny afternoon in the park...</p>
-//           {/* Add more paragraphs or elements to tell your story */}
-//         </div>
-//       </section>
-
-//       <section className="wedding-details min-h-screen flex items-center bg-gray-100 p-8">
-//         <div className="max-w-3xl mx-auto text-center">
-//           <h2 className="text-3xl font-bold mb-6">Wedding Details</h2>
-//           <p className="mb-4">Join us in celebrating our special day!</p>
-//           {/* Add more details about the wedding */}
-//         </div>
-//       </section>
-
-//       <section className="rsvp min-h-screen flex items-center p-8">
-//         <div className="max-w-3xl mx-auto text-center">
-//           <h2 className="text-3xl font-bold mb-6">RSVP</h2>
-//           <p className="mb-4">We look forward to seeing you!</p>
-//           {/* Add RSVP form or link */}
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
