@@ -87,7 +87,7 @@ h2 {
 }
 
 header {
-  height: 60px;
+  min-height: 60px;
 }
 
 header nav ul li a {
@@ -177,13 +177,13 @@ header nav ul li a:hover {
 
 @media screen and (max-width: 600px) {
   .timeline::after {
-    left: 31px;
+    left: 10px;
   }
   
   .timeline-item {
     width: 100%;
-    padding-left: 60px;
-    padding-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   .timeline-item.right {
@@ -192,7 +192,7 @@ header nav ul li a:hover {
 
   .timeline-item.left,
   .timeline-item.right {
-    transform: translateX(100px);
+    transform: translateX(20px);
   }
 }
 
