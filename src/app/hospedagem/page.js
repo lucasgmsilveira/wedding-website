@@ -24,10 +24,10 @@ const hotels = [
 export default function Hospedagem() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Suggested Hotels</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Hoteis Sugeridos</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {hotels.map((hotel, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden hotel-card">
             <Image
               src={hotel.image}
               alt={hotel.name}
@@ -38,6 +38,7 @@ export default function Hospedagem() {
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2">{hotel.name}</h2>
               <p className="text-gray-600 mb-4">{hotel.description}</p>
+              <div className="button-container">
               <a
                 href={hotel.website}
                 target="_blank"
@@ -46,6 +47,7 @@ export default function Hospedagem() {
               >
                 Book Now
               </a>
+              </div>
             </div>
           </div>
         ))}
