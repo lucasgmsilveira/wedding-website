@@ -23,28 +23,52 @@ import Timeline from "./components/Timeline";
 
 const timelineEvents = [
   {
-    title: "Our First Meeting",
-    date: "June 15, 2020",
-    description: "We met at a local coffee shop and instantly connected over our shared love for adventure.",
-    imageUrl: "/images/first-meeting.jpg",
+    title: "A primeira vista",
+    date: "Dezembro, 2019",
+    description: "Em meio a risadas e música, nos encontramos pela primeira vez. Mal sabíamos que algo muito especial tinha começado, mas uma pandemia os aguardava!",
+    imageUrl: "/images/nossa-historia/river_2.jpg",
   },
   {
-    title: "First Date",
-    date: "July 1, 2020",
-    description: "Our first official date was a picnic in the park. We talked for hours under the stars.",
-    imageUrl: "/images/niver.jpg",
+    title: "O namoro",
+    date: "Agosto, 2021",
+    description: "Depois de vários encontros e conversas diversas, a vontade de ficar mais e mais juntos só cresceu (em média)!",
+    imageUrl: "/images/nossa-historia/lago.jpg",
   },
   {
-    title: "Moving In Together",
-    date: "February 14, 2022",
-    description: "We took the big step of moving in together and starting our life as a couple.",
-    imageUrl: "/images/apto-poa.jpg",
+    title: "A festa",
+    date: "Dezembro, 2021",
+    description: "Voltar à mesma festa onde nos conhecemos traz uma sensação única. O ambiente familiar e o sentimento de amor sempre mais forte!",
+    imageUrl: "/images/nossa-historia/festa.jpg",
   },
   {
-    title: "The Proposal",
-    date: "December 25, 2023",
-    description: "On Christmas morning, surrounded by family, I got down on one knee and asked the big question.",
-    imageUrl: "/images/heaven.jpg",
+    title: "A natureza",
+    date: "Janeiro, 2022",
+    description: "Amamos respirar o ar puro, contemplar paisagens e nos conectarmos ainda mais com a natureza e com o outro!",
+    imageUrl: "/images/nossa-historia/cascata.jpg",
+  },
+  {
+    title: "O presságio",
+    date: "Outubro, 2022",
+    description: "Em um daqueles momentos aleatórios, percebemos que casar não era mais uma questão de \"se\", mas de \"quando\". Será que o Lucas vai se ligar?",
+    imageUrl: "/images/nossa-historia/bride.jpg",
+  },
+  {
+    title: "A viagem",
+    date: "Janeiro, 2023",
+    description: "Enquanto o pedido não chega, bora viajar! Expande nossos horizontes, cria memórias inesquecíveis e nos lembra de que qualquer lugar é a nossa casa.",
+    imageUrl: "/images/nossa-historia/argentina.jpg",
+  },
+  {
+    title: "A proposta",
+    date: "25 de Novembro de 2023",
+    description: "\"Nãããão! Digo... Siiiim!!!\" Quase infartando, finalmente o pedido que mudaria nossas vidas foi feito! E você, aceita ir no nosso casamento?!",
+    imageUrl: "/images/nossa-historia/pedido.jpg",
+  },
+  {
+    title: "E você?",
+    date: "11 de Janeiro de 2025",
+    description: "Aceita ir no nosso casamento?!",
+    imageUrl: "/images/nossa-historia/aceita.jpg",
   },
 ];
 
@@ -60,14 +84,14 @@ export default function Home() {
       </section>
       <section className="our-story min-h-screen flex items-center p-8 text-lime-700 drop-shadow-lg font-bold">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center bg-white bg-opacity-60 p-8 rounded-xl ">
+          <h2 className="text-3xl font-bold mb-6 text-center bg-white bg-opacity-70 p-8 rounded-xl ">
             Um pouco da nossa história...
           </h2>
           <Timeline events={timelineEvents} />
         </div>
       </section>
 
-      <section className="wedding-details max-h-fit flex items-center bg-white bg-opacity-90 p-8 rounded-xl my-6 text-lime-700 drop-shadow-lg">
+      <section className="wedding-details max-h-fit flex items-center bg-white bg-opacity-80 p-8 rounded-xl my-6 text-lime-700 drop-shadow-lg">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">Detalhes sobre o casamento</h2>
           <p className="text-xl mb-4 drop-shadow-lg"><b>Data</b>: 11 de janeiro de 2025</p>
@@ -98,13 +122,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rsvp  max-h-fit flex items-center p-8 bg-white bg-opacity-80 p-8 rounded-xl my-6 text-lime-700 drop-shadow-lg font-bold">
+      <section className="rsvp max-h-fit flex items-center p-8 bg-white bg-opacity-80 p-8 rounded-xl my-6 text-red-500 drop-shadow-lg font-bold">
         <div className="max-w-3xl mx-auto text-center">
           <a 
             href="https://wa.me/5551993016445" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-lime-600 ml-1 transition-colors"
+            className="inline-flex items-center gap-2 hover:text-red-700 ml-1 transition-colors"
             title="WhatsApp do Lucas"
           >
             <span className="text-2xl font-bold">Caso não possa comparecer, avise-nos clicando aqui!</span>

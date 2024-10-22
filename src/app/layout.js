@@ -47,8 +47,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Casamento ~ Raquel e Lucas",
-  description: "Bem-vindos ao site com informações do casamento da Raquel e do Lucas!",
+  title: "Casamento ~ Lucas e Raquel",
+  description: "Bem-vindos ao site com informações do casamento do Lucas e da Raquel!",
 };
 
 export default function RootLayout({ children }) {

@@ -10,8 +10,26 @@ export default function Presentear({ params }) {
   const presente = listaPresentes.find(item => item.id === id);
   
   if (!presente) {
-    return <p>Presente não encontrado.</p>;
+    return <center><p className="text-3xl font-bold mt-12 mb-12 text-center text-red-500 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-70 w-fit">
+      Presente não encontrado.
+      </p></center>;
   }
+
+  const [copySuccess, setCopySuccess] = useState(false);
+
+  const handleCopyClick = async () => {
+    try {
+      await navigator.clipboard.writeText(presente.qrCodeText);
+      setCopySuccess(true);
+      
+      // Reset the success message after 2 seconds
+      setTimeout(() => {
+        setCopySuccess(false);
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -69,57 +87,70 @@ export default function Presentear({ params }) {
 
   return (
     <main className="gift-page">
-      <div className="gift-detail-card text-lime-600 drop-shadow-xl font-bold">
-        <h1 className="mb-4"><strong>{presente.nome}</strong></h1>
+      <div className="gift-detail-card text-lime-600 drop-shadow-xl">
+        {/* <h1 className="mb-4"><strong>{presente.nome}</strong></h1> */}
         <Image 
           src={presente.urlImagem}
           alt={presente.nome}
           width={300}
           height={300}
+          className=" bg-white rounded-xl shadow-md"
         />
         
         {/* Initial Content */}
         <div className={`initial-content ${(isFading || isLoading) ? 'fade-out' : 'fade-element'}`}
              style={{ display: isLoading ? 'none' : 'block' }}>
-          <p className="mt-4 mb-2">{presente.descricao}</p>
-          <p className="mb-2"><strong>Valor:</strong> R$ {presente.valor}</p>
-          <p className="mb-4">Escaneie o QR code para realizar o PIX:</p>
-          <div className="qr-code-container" onClick={handleQrCodeClick} role="button" aria-label="Ampliar QR code">
+          <h2 className="mt-4 mb-4">{presente.descricao}</h2>
+          <h2 className="mb-4 font-bold"><strong>Valor:</strong> R$ {presente.valor}</h2>
+          {/* <p className="mt-6 mb-4">Escaneie o código QR para realizar o PIX:</p> */}
+          <div className="qr-code-container p-2" onClick={handleQrCodeClick} role="button" aria-label="Ampliar QR code">
             <Image 
               src={presente.qrCodeUrl}
               alt={`QR Code for ${presente.nome}`}
               width={200}
               height={200}
-              className="qr-code"
+              className="qr-code drop-shadow-lg bg-white rounded-xl shadow-md p-1"
             />
           </div>
           <br />
-          <button className="confirm-button" onClick={handleConfirmar}>
-            Confirmar presente!
+          
+        <div className="flex flex-col items-center gap-2 mt-2">
+          <button 
+            onClick={handleCopyClick}
+            className={`copy-button px-4 py-2 bg-green-300 text-white-600 rounded-lg shadow-md hover:bg-green-200 transition-colors ${
+              copySuccess ? 'bg-white-50' : ''
+            }`}
+          >
+            {copySuccess ? 'Copiado!' : 'Copiar código PIX'}
           </button>
         </div>
-
-        {/* Loading State */}
+        <br />
+          {/* <button className="confirm-button font-bold shadow-lg drop-shadow-xl" onClick={handleConfirmar}>
+            Confirmar!
+          </button> */}
+        </div>
+{/* 
         <div className={`loading-content ${!showLoading ? 'fade-out' : 'fade-element'} ${isFading ? 'fade-out' : ''}`}
              style={{ display: !showLoading && !isLoading ? 'none' : 'block' }}>
-          <div className="loading-container">
-            <div className="spinner"></div>
-            <p>Processando seu presente...</p>
+          <div className="loading-container text-lime-600 drop-shadow-xl font-bold">
+            <div className="spinner text-lime-600 drop-shadow-xl font-bold"></div>
+            <p>Processando...</p>
           </div>
         </div>
 
-        {/* Completed State */}
         {isCompleted && (
           <div className="thank-you-container fade-in text-lime-600 drop-shadow-xl font-bold">
-            <p className="thank-you-message mb-4 text-lime-600 drop-shadow-xl font-bold">Muito obrigado pelo presente!</p>
+            <p className="thank-you-message mb-4 text-lime-600 drop-shadow-xl font-bold">
+              Agradecemos de coração!
+            </p>
             <button 
               className="return-button"
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/presentes')}
             >
-              Voltar à página inicial
+              Voltar
             </button>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Modal */}

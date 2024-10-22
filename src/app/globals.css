@@ -143,7 +143,7 @@ header nav ul li a:hover {
 
 .timeline-content {
   padding: 20px 30px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   position: relative;
   border-radius: 3px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -206,7 +206,7 @@ header nav ul li a:hover {
 
 /* Style for the confirm button */
 .confirm-button {
-  background-color: #21ff9f;
+  background-color: #00bb6a;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -217,36 +217,40 @@ header nav ul li a:hover {
 }
 
 .confirm-button:hover {
-  background-color: #00b712;
+  background-color: #00ec86;
   transform: scale(1.05);
 }
 
 /* Animation for the 'Presentar' button on the gift list page */
 .presentar-button {
-  background-color: #017750;
+  background-color: #02a46e;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .presentar-button:hover {
-  background-color: #01a46e;
+  background-color: #1bbc87;
   transform: scale(1.05);
 }
 
 /* CSS for the QR code container */
 .qr-code-container {
   position: relative;
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  cursor: pointer; /* Indicate it's clickable */
+  cursor: pointer;
+  /* transition: transform 0.5s ease; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Remove any existing zoom-in effect */
@@ -254,8 +258,14 @@ header nav ul li a:hover {
   transition: none;
 }
 
-.qr-code-container:hover .qr-code {
-  transform: none;
+.qr-code-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.qr-code:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
 }
 
 /* Add magnifying glass icon overlay on hover */
@@ -276,6 +286,23 @@ header nav ul li a:hover {
 
 .qr-code-container:hover::after {
   opacity: 1;
+}
+
+/* Style for the confirm button */
+.copy-button {
+  /* background-color: #00bb6a;
+  color: #00bb6a; */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.6s ease, transform 0.5s ease;
+}
+
+.copy-button:hover {
+  /* background-color: #00ec86; */
+  transform: scale(1.05);
 }
 
 .initial-content,
@@ -357,7 +384,7 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   margin: 0 auto; 
   border-radius: 10px;
@@ -485,7 +512,7 @@ body.modal-open {
 /* Spinner */
 .spinner {
   border: 8px solid #f3f3f3; /* Light gray */
-  border-top: 8px solid #0070f3; /* Blue or your preferred color */
+  border-top: 8px solid #f34100; /* Blue or your preferred color */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -501,10 +528,9 @@ body.modal-open {
 /* Loading message */
 .loading-container p {
   margin-top: 10px;
-  font-size: 16px;
-  color: #333;
+  font-size: 18px;
+  /* color: #333; */
 }
-
 
 .hotel-card {
   background-color: rgba(255, 255, 255, 0.6);

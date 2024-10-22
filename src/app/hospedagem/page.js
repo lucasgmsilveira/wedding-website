@@ -30,7 +30,7 @@ const hotels = [
 export default function Hospedagem() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-60">
+      <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-80">
         Hoteis Sugeridos
       </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

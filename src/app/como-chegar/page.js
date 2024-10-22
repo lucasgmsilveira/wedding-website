@@ -8,10 +8,10 @@ const LocationBlock = ({ title, imageSrc, children, buttonText, buttonLink }) =>
         <img
           src={imageSrc}
           alt={title}
-          className="bg-white bg-opacity-10 rounded-lg shadow-lg w-full h-64 object-cover"
+          className="bg-white bg-opacity-10 rounded-lg shadow-lg w-full h-96 object-cover"
         />
       </div>
-      <div className="bg-white bg-opacity-60 rounded-lg p-8 max-w-96 md:w-1/2 space-y-4">
+      <div className="bg-white bg-opacity-80 rounded-lg p-8 max-w-full md:w-1/2 space-y-4">
         {/* <h2 className="text-2xl font-semibold text-gray-800">{title}</h2> */}
         <div className="text-gray-600 space-y-2">
           {children}
@@ -54,46 +54,50 @@ export default function ComoChegar() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
-        <div>
-          <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-60">
+        <div className="text-xl">
+          <h1 className="text-3xl font-bold mb-12 text-center text-lime-600 drop-shadow-lg bg-white rounded-xl shadow-md p-8 bg-opacity-80">
             Como Chegar
           </h1>
           <LocationBlock
             title="Igreja"
-            imageSrc="/api/placeholder/800/600"
+            imageSrc="/images/como-chegar/igreja.jpg"
             buttonText="Ver no Google Maps"
-            buttonLink="https://maps.google.com/..."
+            buttonLink="https://maps.app.goo.gl/kvWPtqpaYtuanepo8"
           >
-            <p>Igreja Nossa Senhora do Brasil</p>
-            <p>Praça Nossa Sra. do Brasil, 01 - Jardim América</p>
-            <p>São Paulo - SP, 01438-060</p>
-            <p>A cerimônia começará pontualmente às 16h30.</p>
+            <p><b>Igreja São Francisco de Salles</b></p>
+            <p>R. Pe. José Aury Brand</p>
+            <p>São José do Sul - RS, 95748-000</p>
+            <p>A cerimônia começará às 19h.</p>
           </LocationBlock>
 
           <LocationBlock
             title="Salão de Festas"
-            imageSrc="/api/placeholder/800/600"
+            imageSrc="/images/como-chegar/fink.png"
             buttonText="Ver no Google Maps"
-            buttonLink="https://maps.google.com/..."
+            buttonLink="https://maps.app.goo.gl/hj7KQfrW4LDpkvN39"
           >
-            <p>Espaço Villa Bisutti</p>
-            <p>Rua Casa do Ator, 642 - Vila Olímpia</p>
-            <p>São Paulo - SP, 04546-003</p>
+            <p><b>Salão Fink</b></p>
+            <p>R. Vinte e Cinco de Julho, 751 - Centro</p>
+            <p>Harmonia - RS, 95785-000</p>
             <p>A recepção terá início logo após a cerimônia.</p>
           </LocationBlock>
 
           <LocationBlock
             title="Transporte"
-            imageSrc="/api/placeholder/800/600"
-            buttonText="Solicitar Uber"
-            buttonLink="https://uber.com"
+            imageSrc="/images/como-chegar/bus.jpg"
+            buttonText="Preencher formulário"
+            buttonLink="https://forms.gle/hZd6e4HXbBFEhxT78"
           >
-            <p>Para sua comodidade, recomendamos o uso de aplicativos de transporte.</p>
-            <p>Há estacionamento disponível em ambos os locais:</p>
+            <p><b>Transporte para o casamento</b></p>
+            <p>Sugerimos um transporte para quem vai estar em Montenegro!</p>
+            <p>Itinerário:</p>
             <ul className="list-disc ml-5">
-              <li>Igreja: Estacionamento com manobrista</li>
-              <li>Salão: Estacionamento coberto no local</li>
+              <li>Saída de Montenegro</li>
+              <li>Igreja</li>
+              <li>Salão </li>
+              <li>Volta à Montenegro</li>
             </ul>
+            <p>Se houver interesse, preencha o formulário no link abaixo!</p>
           </LocationBlock>
         </div>
       </div>

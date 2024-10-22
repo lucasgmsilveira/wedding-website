@@ -1,34 +1,83 @@
 [
     {
-        "id": "presente-1",
+        "id": "eu-so-acho-engracado",
         "nome": "Presente 1",
-        "descricao": "Descrição 1",
-        "valor": "50.00",
-        "urlImagem": "/images/presentes/baloon.jpg",
-        "qrCodeUrl": "/images/qr_codes/qr_nubank_50.jpg"
-    },
-    {
-        "id": "presente-2",
-        "nome": "Presente 2",
-        "descricao": "Descrição 2",
+        "descricao": "Dar pitaco na vida dos noivos",
         "valor": "100.00",
-        "urlImagem": "/images/presentes/spa.jpg",
-        "qrCodeUrl": "/images/qr_codes/qr_nubank_100.jpg"
+        "urlImagem": "/images/presentes/1_opinions.webp",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_100.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406100.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304C0EB"
     },
     {
-        "id": "presente-3",
+        "id": "passeio-de-balao-com-padre",
+        "nome": "Presente 2",
+        "descricao": "Passeio de balão pros noivos renovarem os ares",
+        "valor": "150.00",
+        "urlImagem": "/images/presentes/2_baloon.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_150.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406150.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento63045491"
+    },
+    {
+        "id": "shark-tank",
         "nome": "Presente 3",
-        "descricao": "Descrição 3",
-        "valor": "200.00",
-        "urlImagem": "/images/presentes/dancing.jpg",
-        "qrCodeUrl": "/images/qr_codes/qr_nubank_200.jpg"
+        "descricao": "Experiência de exploração aquática (só o noivo)",
+        "valor": "175.00",
+        "urlImagem": "/images/presentes/3_sharks.png",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_175.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406175.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304C0D9"
     },
     {
-        "id": "presente-4",
+        "id": "cesta-basica",
         "nome": "Presente 4",
-        "descricao": "Descrição 4",
+        "descricao": "Cota no primeiro rancho dos noivos",
+        "valor": "200.00",
+        "urlImagem": "/images/presentes/4_cesta_basica.webp",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_200.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406200.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304581F"
+    },
+    {
+        "id": "parenting-emergency-kit",
+        "nome": "Presente 5",
+        "descricao": "Kit de emergência pros noivos não surtarem quando outra vida nascer",
+        "valor": "225.00",
+        "urlImagem": "/images/presentes/5_baby.webp",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_225.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406225.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304CC57"
+    },
+    {
+        "id": "la-cucaracha",
+        "nome": "Presente 6",
+        "descricao": "Aula de dança pros noivos não passarem vergonha",
         "valor": "250.00",
-        "urlImagem": "/images/presentes/baloon.jpg",
-        "qrCodeUrl": "/images/qr_codes/qr_nubank_250.jpg"
+        "urlImagem": "/images/presentes/6_dancing.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_250.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406250.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304CC65"
+    },
+    {
+        "id": "se-fui-pobre-nao-lembro",
+        "nome": "Presente 7",
+        "descricao": "Ritual sensorial para a purificação das energias vitais (spa)",
+        "valor": "275.00",
+        "urlImagem": "/images/presentes/7_spa.jpg",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_275.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406275.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304582D"
+    },
+    {
+        "id": "crazy-in-love",
+        "nome": "Presente 8",
+        "descricao": "Uma sessão pra preservação e otimização do estado psicológico dos noivos (terapia)",
+        "valor": "300.00",
+        "urlImagem": "/images/presentes/8_therapy.png",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_300.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406300.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento6304DFAC"
+    },
+    {
+        "id": "another-brick-in-the-wall",
+        "nome": "Presente 9",
+        "descricao": "Carga de tijolos pra futura casa dos noivos",
+        "valor": "350.00",
+        "urlImagem": "/images/presentes/9_bricks.webp",
+        "qrCodeUrl": "/images/qr_codes/qr_nubank_350.png",
+        "qrCodeText": "00020126670014BR.GOV.BCB.PIX0126raquelelucas2025@gmail.com0215Muito obrigado!5204000053039865406350.005802BR5925Lucas Gabriel Mota da Sil6009SAO PAULO61080540900062130509casamento63044BD6"
     }
 ]
