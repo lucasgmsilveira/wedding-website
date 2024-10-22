@@ -5,25 +5,25 @@ const timelineEvents = [
   {
     title: "A primeira vista",
     date: "Dezembro, 2019",
-    description: "Em meio a risadas e música, nos encontramos pela primeira vez. Mal sabíamos que algo muito especial tinha começado, mas uma pandemia os aguardava!",
+    description: "Em meio a risadas e música, nos encontramos pela primeira vez. Mal sabíamos que algo muito especial tinha começado, mas uma pandemia nos aguardava!",
     imageUrl: "/images/nossa-historia/river_2.jpg",
   },
   {
     title: "O namoro",
     date: "Agosto, 2021",
-    description: "Depois de vários encontros e conversas diversas, a vontade de ficar mais e mais juntos só cresceu (em média)!",
+    description: "Depois de vários encontros e conversas diversas, a vontade de ficar mais e mais juntos só cresceu!",
     imageUrl: "/images/nossa-historia/lago.jpg",
   },
   {
     title: "A festa",
     date: "Dezembro, 2021",
-    description: "Voltar à mesma festa onde nos conhecemos traz uma sensação única. O ambiente familiar e o sentimento de amor sempre mais forte!",
+    description: "Estes somos nós, voltando à mesma festa onde nos conhecemos!",
     imageUrl: "/images/nossa-historia/festa.jpg",
   },
   {
     title: "A natureza",
     date: "Janeiro, 2022",
-    description: "Amamos respirar o ar puro, contemplar paisagens e nos conectarmos ainda mais com a natureza e com o outro!",
+    description: "Amamos respirar o ar puro e a natureza é o ambiente em que mais nos conectamos!",
     imageUrl: "/images/nossa-historia/cascata.jpg",
   },
   {
@@ -41,7 +41,7 @@ const timelineEvents = [
   {
     title: "A proposta",
     date: "25 de Novembro de 2023",
-    description: "\"Nãããão! Digo... Siiiim!!!\" Quase infartando, finalmente o pedido que mudaria nossas vidas foi feito! E você, aceita ir no nosso casamento?!",
+    description: "\"Nãããão! Digo... Siiiim!!!\" Quase infartando, finalmente o pedido que mudaria nossas vidas foi feito!",
     imageUrl: "/images/nossa-historia/pedido.jpg",
   },
   {
