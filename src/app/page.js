@@ -102,13 +102,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rsvp max-h-fit flex items-center p-8 bg-white bg-opacity-80 p-8 rounded-xl my-6 text-red-500 drop-shadow-lg font-bold">
+      <section className="rsvp max-h-fit flex items-center p-8 bg-white bg-opacity-80 p-8 rounded-xl my-6 text-orange-600 drop-shadow-lg font-bold">
         <div className="max-w-3xl mx-auto text-center">
           <a 
             href="https://wa.me/5551993016445" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-red-700 ml-1 transition-colors"
+            className="inline-flex items-center gap-2 hover:text-red-300 ml-1 transition-colors"
             title="WhatsApp do Lucas"
           >
             <span className="text-2xl font-bold">Caso não possa comparecer, avise-nos clicando aqui!</span>
