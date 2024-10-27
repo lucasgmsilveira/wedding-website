@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import { Star } from 'lucide-react';
 
 function formatPhoneNumber(phoneNumber) {
   const match = phoneNumber.match(/^(\d{3})(\d{4,5})(\d{4})$/);
@@ -58,7 +57,7 @@ export default function Hospedagem() {
         {hotels.map((hotel, index) => (
           <div key={index} className="relative pt-2 px-2 pb-6">
             <div className={`bg-white shadow-lg rounded-lg overflow-hidden hotel-card relative ${
-              index === 0 ? 'border-4 border-blue-500 animate-pulse-scale' : ''
+              index === 0 ? 'border-4 border-yellow-500 animate-pulse-scale' : ''
             }`}>
               <Image
                 src={hotel.image}
@@ -68,9 +67,9 @@ export default function Hospedagem() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2">{hotel.name}</h2>
+                <h2 className="text-black text-2xl font-bold mb-2">{hotel.name}</h2>
                 {hotel.phone && 
-                <p className="text-l font-semibold mb-2">
+                <p className="text-black text-xl font-semibold mb-2">
                   Fone: <a href={`tel:${hotel.phone}`}>{formatPhoneNumber(hotel.phone)}</a>
                 </p>
                 }

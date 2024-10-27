@@ -86,6 +86,12 @@ h2 {
   }
 }
 
+/* @media only screen and (max-width: 768px) {
+  div {
+    color: black;
+  }
+} */
+
 header {
   min-height: 60px;
 }
@@ -511,8 +517,8 @@ body.modal-open {
 
 /* Spinner */
 .spinner {
-  border: 8px solid #f3f3f3; /* Light gray */
-  border-top: 8px solid #f34100; /* Blue or your preferred color */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #f34100;
   border-radius: 50%;
   width: 60px;
   height: 60px;
