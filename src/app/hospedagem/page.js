@@ -56,12 +56,10 @@ export default function Hospedagem() {
       </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {hotels.map((hotel, index) => (
-          <div key={index} className="relative"> {/* Wrapper div */}
-            <div 
-              className={`bg-white shadow-lg rounded-lg overflow-hidden hotel-card relative ${
-                index === 0 ? 'border-4 border-yellow-500 animate-pulse-scale' : ''
-              }`}
-            >
+          <div key={index} className="relative pt-2 px-2 pb-6">
+            <div className={`bg-white shadow-lg rounded-lg overflow-hidden hotel-card relative ${
+              index === 0 ? 'border-4 border-blue-500 animate-pulse-scale' : ''
+            }`}>
               <Image
                 src={hotel.image}
                 alt={hotel.name}
@@ -69,13 +67,6 @@ export default function Hospedagem() {
                 height={300}
                 className="w-full h-48 object-cover"
               />
-              {index === 0 && (
-                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover/stamp:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <p className="text-white text-xl font-semibold text-center px-4 transform -translate-y-4 group-hover/stamp:translate-y-0 transition-transform duration-300">
-                    Hotel recomendado pelos noivos!
-                  </p>
-                </div>
-              )}
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">{hotel.name}</h2>
                 {hotel.phone && 
@@ -97,23 +88,29 @@ export default function Hospedagem() {
               </div>
             </div>
             
-            {/* Enhanced Stamp with Tooltip */}
             {index === 0 && (
-              <div className="absolute -bottom-4 -right-4 z-50 group/stamp">
-                <div className="relative cursor-pointer transform transition-transform duration-300 hover:scale-110">
-                  <div className="bg-yellow-500 rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="absolute bottom-0 right-0 z-20">
+                <div className="relative group">
+                  {/* Star Badge */}
+                  <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full p-3 shadow-lg transform transition-transform duration-300 hover:scale-110 cursor-pointer">
                     <StarIcon />
                   </div>
                   
-                  {/* Enhanced Tooltip */}
-                  <div className="absolute bottom-full right-0 mb-4 w-72 opacity-0 group-hover/stamp:opacity-100 transition-all duration-300 pointer-events-none transform translate-y-2 group-hover/stamp:translate-y-0">
-                    <div className="bg-white rounded-lg shadow-2xl p-5 relative">
-                      <div className="bg-yellow-500 w-full h-1 absolute top-0 left-0 rounded-t-lg"></div>
-                      <p className="text-gray-800 font-medium leading-relaxed">
-                        <b>Sugerimos este hotel!</b> <br></br> Mencione que é para o casamento do Lucas e da Raquel e obtenha desconto!
-                      </p>
-                      {/* Refined tooltip arrow */}
-                      <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 shadow-lg"></div>
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-y-2 pointer-events-none">
+                    <div className="bg-white rounded-lg shadow-2xl p-6 w-72">
+                      <div className="relative">
+                        <p className="text-gray-800 text-m leading-relaxed text-center">
+                        <b>Sugerimos este hotel!</b> <br></br> Mencione que é para o nosso casamento e obtenha desconto!
+                        </p>
+                        {/* Decorative elements */}
+                        <div className="absolute -top-4 right-0 w-8 h-8 bg-yellow-400/20 rounded-full -z-10"></div>
+                        <div className="absolute -bottom-2 left-4 w-6 h-6 bg-yellow-400/10 rounded-full -z-10"></div>
+                      </div>
+                    </div>
+                    {/* Arrow */}
+                    <div className="absolute bottom-0 right-6 transform translate-y-full">
+                      <div className="w-4 h-4 bg-white rotate-45 transform -translate-y-2 shadow-lg"></div>
                     </div>
                   </div>
                 </div>
